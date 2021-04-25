@@ -1,0 +1,550 @@
+body {
+    margin: 0;
+    font-family: 'Underdog', cursive;
+
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: 40px 0;
+
+  background-color: #e5e5e5;
+}
+
+/* Контейнер */
+.container {
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Начальный экран с орлом */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../images/intro.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/* Второй экран с Мавзолеем*/
+.intro__two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../images/intro_two.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro__title {
+    font-family: 'Balsamiq Sans', cursive;
+    color: #fff;
+    font-size: 150px;
+    line-height: 1;
+}
+
+.intro__titletwo {
+    font-family: 'Underdog', cursive;
+    color: #fff;
+    font-size: 130px;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+
+    background-color: #dc143c;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    padding-top: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Orelega One', cursive;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/* Nav */
+.nav {
+    margin-left: auto;
+    margin-top: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #fce38a;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    color: #fce38a;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link.active {
+    color: #fce38a;
+}
+
+/* MENU */
+.mainmenubtn {
+
+    font-family: 'Underdog', cursive;
+    font-size: 14px;
+    background-color: rgba(0,0,0,.55);
+    opacity: .95;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:5px;
+}
+
+.mainmenubtn:hover{
+    color: #fce38a;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: black;
+    min-width: 200px;
+    background-color: rgba(0,0,0,.55);
+    opacity: .95;
+
+}
+.dropdown-child a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-child a:hover{
+    color: #fce38a;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    border: 3px solid #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background 0.2s linear, color 0.2s linear;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  background: url("../images/about1.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.about__us {
+  text-align: center;
+  font-family: 'Orelega One', cursive;
+  font-size: 50px;
+  color: #fff;
+}
+
+/* Section */
+
+.section {
+  padding: 80px 0;
+}
+
+.section--devices {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  background: url("../images/devices-bg.jpg")
+  center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.section--gray {
+  background-color: #f8f8f8;
+}
+
+.section--clients{
+  background: #f5f5f5
+  url("../images/clients-bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.section--map {
+  background: #e6e6e6;
+}
+
+
+.section__header {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+
+.section__suptitle {
+  font-size: 24px;
+  color: #333;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.section__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section__title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 30px auto 30px;
+
+  background-color: #f38181;
+}
+
+.section__text {
+  font-size: 15px;
+  font-weight: 400;
+  color: #999;
+  font-family: 'Underdog', cursive;
+}
+
+/* Reviews */
+.reviews {
+  padding: 30px 0 30px 0;
+  position: relative;
+}
+
+.reviews__item {
+padding-left: 255px;
+
+position: relative;
+}
+
+.reviews__photo{
+height: 180px;
+width: : 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__photo-maxambet {
+  height: 240px;
+  width: 230px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.reviews__phototwo{
+height: 290px;
+weight: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__alash{
+height: 250px;
+weight: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.reviews__bibi{
+height: 200px;
+weight: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__baba{
+height: 200px;
+weight: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__text {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #999;
+}
+
+.reviews__author{
+  font-family: 'Orelega One', cursive;
+  font-size: 40px;
+  color: #333;
+}
+
+.reviews__author:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 3px;
+  margin-right: 10px;
+
+  background-color: #f38181;
+}
+
+.reviews__btn {
+  font-size: 0;
+  color: transparent;
+
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.reviews__btn:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+
+}
+
+/* Card */
+.card {
+  margin-top: 80px;
+  padding: 0 50px 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__item {
+  width: 380px;
+}
+
+.card__inner {
+  position: relative;
+  background-color: #95e1d3;
+}
+
+.card__item:hover .card__img {
+  transform: translate3d(-10px, -10px, 0);
+}
+
+.card__item:hover .card__img img {
+  opacity: .1;
+}
+
+.card__item:hover .card__text {
+  opacity: 1;
+}
+
+.card__fotka {
+  width: 380px;
+  height: 550px;
+}
+
+.card__img {
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+
+  transition: transform .2s linear;
+}
+
+.card__img img {
+  display: block;
+  transition: opacity .1s linear;
+}
+
+.card__text {
+  width: 100%;
+
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  transform: translate3d(0, -50, 0);
+
+  transition: opacity .2s linear;
+}
+
+.card__info {
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.card__name {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333;
+}
+
+.card__prof {
+  font-size: 15px;
+  color: #999;
+  font-style: italic;
+  font-weight: 300;
+}
+
+
+/*Галерея*/
+.section_header {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.section_title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+.gallery {
+  display: flex;
+}
+.gallery_col{
+  flex: 1 1 0;
+}
+.gallery_aitem {
+  display: block;
+}
+.gallery_photo{
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
